@@ -54,6 +54,8 @@ Use the following [traces](https://drive.google.com/drive/folders/1BE4XkJhgXWZ6J
 
 To speedup simulation, run them parallely. You can use `multiprocessing` module of python to do this.
 
+**Simulations should be done with `25M` Warmup and `25M` Simulation instructions**
+
 ## Submission
 Submit only the following files:
 - `FIFO.cc`
