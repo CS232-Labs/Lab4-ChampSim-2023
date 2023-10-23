@@ -15,8 +15,6 @@ We will be comparing `IPC`, `L2C Miss Rate` of these replacement policies for `L
 
 Plot the `IPC` and `L2C Miss Rate` values for different policies and traces. Use a multi-bar chart. Write your reasoning for the variations in these values in the report.
 
-Use the following [traces](https://drive.google.com/drive/folders/1BE4XkJhgXWZ6JOIByQCMF_4cFSvlb3f1?usp=sharing) for these simulations.
-
 ## Part II : Data Prefetcher
 
 We will be implementing Stream Prefetcher in this part.
@@ -41,3 +39,29 @@ Maintain these monitoring regions in a table. When table gets filled and you nee
 
 ![](.images/stream1.png)
 ![](.images/stream2.png)
+
+Compare Stream Prefetcher with IP Stride prefetcher which is already implemented in the ChampSim provided. Both the prefetchers should be working at **L2** level.
+
+Compare these prefetcher on following metrics:
+- Speedup
+- L2C Load MPKI
+- L1D MPKI
+
+Plot bar graphs for each one of the above metrics
+
+### Traces
+Use the following [traces](https://drive.google.com/drive/folders/1BE4XkJhgXWZ6JOIByQCMF_4cFSvlb3f1?usp=sharing) for the simulations for above questions
+
+To speedup simulation, run them parallely. You can use `multiprocessing` module of python to do this.
+
+## Submission
+Submit only the following files:
+- `FIFO.cc`
+- `LFU.cc`
+- `BIP.cc`
+- `stream_prefetcher.cc`
+- `report.pdf`
+- `*.cc` (if you have implemented apart from these)
+
+### Important Note
+Unlike previous labs, in this part you are free to experiment and come up with improvements. It's completetly fine if you don't get improvements. You should mention what you tried in the report.
