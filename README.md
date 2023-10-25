@@ -10,6 +10,8 @@ In this part we will be implementing replacement policies and comparing them
 
 All the policies are to be used for L2C cache
 
+Look inside [replacement](./ChampSim/replacement/) folder in ChampSim
+
 ### Comparison of Replacement Policies
 We will be comparing `IPC`, `L2C Miss Rate` of these replacement policies for `L2C` cache. 
 
@@ -36,6 +38,8 @@ In short, after getting miss in the monitoring region
 2. Move monitoring region as `start_addr += stream_dirn*PREFETCH_DEGREE` and `end_addr += stream_dirn*PREFETCH_DEGREE`
 
 Maintain these monitoring regions in a table. When table gets filled and you need to evict one of the monitoring regions, use LRU policy to do so. Keep size of the table as 64.
+
+Look inside [prefetcher](./ChampSim/prefetcher/) folder in ChampSim
 
 ![](.images/stream1.png)
 ![](.images/stream2.png)
