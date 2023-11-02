@@ -13,9 +13,9 @@ All the policies are to be used for L2C cache
 Look inside [replacement](./ChampSim/replacement/) folder in ChampSim
 
 ### Comparison of Replacement Policies
-We will be comparing `IPC`, `L2C Miss Rate` of these replacement policies for `L2C` cache. 
+We will be comparing `Speedup`, `L2C Miss Rate` of these replacement policies for `L2C` cache. 
 
-Plot the `IPC` and `L2C Miss Rate` values for different policies and traces. Use a multi-bar chart. Write your reasoning for the variations in these values in the report.
+Plot the `Speedup` and `L2C Miss Rate` values for different policies and traces. Use a multi-bar chart. Write your reasoning for the variations in these values in the report.
 
 ## Part II : Data Prefetcher
 
@@ -48,6 +48,7 @@ Compare Stream Prefetcher with IP Stride prefetcher which is already implemented
 
 Compare these prefetcher on following metrics:
 - Speedup
+- Prefetcher Accuracy
 - L2C Load MPKI
 - L1D MPKI
 
@@ -71,3 +72,9 @@ Submit only the following files:
 
 ### Important Note
 Unlike previous labs, in this part you are free to experiment and come up with improvements. It's completetly fine if you don't get improvements. You should mention what you tried in the report.
+
+## Note
+
+Speedup is the ratio of IPCs. In case of replacement policies divide the IPCs by IPC of LRU policy. In case of prefetcher divide the IPCs by IPC of IP Stride Prefetcher. This quantity tells us how fast have our improvements been compared to baseline. 
+
+Prefetcher accuracy is `USEFUL/ISSUED`
